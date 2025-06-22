@@ -1,0 +1,13 @@
+
+name: ci_workflow_2_hnkp
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run a one-line script
+      run: echo "Hello, world from ci_workflow_2_hnkp in $(basename $GITHUB_REPOSITORY)!"
+    - name: Simulate tests
+      run: sleep 10 && echo "Tests passed!"
